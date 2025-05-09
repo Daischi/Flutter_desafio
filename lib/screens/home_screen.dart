@@ -145,11 +145,33 @@ class _HomeScreenState extends State<HomeScreen>
               floating: true,
               pinned: true,
               expandedHeight: _showTitle ? 0 : 100,
-              title: AnimatedOpacity(
-                opacity: _showTitle ? 1.0 : 0.0,
+              title: AnimatedSwitcher(
                 duration: const Duration(milliseconds: 250),
-                child: const Text('PoppiStream'),
+                child:
+                    _showTitle
+                        ? const Text('Poppi Cine')
+                        : Row(
+                          key: const ValueKey('logo'),
+                          children: [
+                            Icon(
+                              Icons.movie_filter,
+                              size: 28,
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
+                            const SizedBox(width: 8),
+                            Text(
+                              'Poppi Cine',
+                              style: Theme.of(
+                                context,
+                              ).textTheme.titleLarge?.copyWith(
+                                fontWeight: FontWeight.bold,
+                                color: Theme.of(context).colorScheme.primary,
+                              ),
+                            ),
+                          ],
+                        ),
               ),
+
               backgroundColor: Theme.of(
                 context,
               ).colorScheme.surface.withOpacity(0.9),
@@ -179,33 +201,6 @@ class _HomeScreenState extends State<HomeScreen>
                   Tab(text: 'Favoritos'),
                 ],
               ),
-              flexibleSpace:
-                  !_showTitle
-                      ? FlexibleSpaceBar(
-                        background: Padding(
-                          padding: const EdgeInsets.fromLTRB(16, 50, 16, 0),
-                          child: Row(
-                            children: [
-                              Icon(
-                                Icons.movie_filter,
-                                size: 32,
-                                color: Theme.of(context).colorScheme.primary,
-                              ),
-                              const SizedBox(width: 8),
-                              Text(
-                                'PoppiStream',
-                                style: Theme.of(
-                                  context,
-                                ).textTheme.headlineSmall?.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                  color: Theme.of(context).colorScheme.primary,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      )
-                      : null,
             ),
           ];
         },
