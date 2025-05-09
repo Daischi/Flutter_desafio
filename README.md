@@ -2,7 +2,7 @@
 
 Um aplicativo de streaming de filmes desenvolvido em **Flutter**, utilizando a API do **The Movie Database (TMDB)**. O **Poppi Cine** permite explorar filmes populares, lançamentos, programas de TV em alta e realizar buscas por seus títulos favoritos. Cada título conta com uma página de detalhes rica em informações como sinopse, elenco, trailers e muito mais.
 
-> **Nota**: Este projeto utiliza a chave de API da TMDB. Substitua `[api_key]` pela sua chave pessoal.
+> **Nota**: Este projeto utiliza a chave de API da TMDB. Substitua `''Minha API''` pela sua chave pessoal.
 
 ## ✨ Funcionalidades
 
@@ -49,4 +49,23 @@ lib/
 ├── main.dart           # Ponto de entrada do app
 ├── theme.dart          # Definições de tema
 └── image_util.dart     # Utilitário de imagens
+```
+
+## 🛠️ Bibliotecas e Dependências
+
+As principais extensões e pacotes utilizados estão definidos no `pubspec.yaml`. Entre eles:
+
+- **http** — Requisições HTTP à API TMDB
+- **provider** — Gerenciamento de estado
+- **carousel_slider** — Banner rotativo
+- **cached_network_image** — Carregamento otimizado de imagens
+- **flutter_dotenv** _(opcional, mas recomendado)_ — Gerenciamento seguro da chave da API
+
+## 🚀 Como rodar o projeto
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/poppi-cine.git
+cd poppi-cine
 ```
