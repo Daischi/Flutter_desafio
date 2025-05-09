@@ -69,3 +69,15 @@ As principais extensões e pacotes utilizados estão definidos no `pubspec.yaml`
 git clone https://github.com/seu-usuario/poppi-cine.git
 cd poppi-cine
 ```
+
+## 📱 Compatibilidade
+
+- ✅ **Android**
+- ✅ **iOS**
+
+## 📬 Contato
+
+Se você tiver alguma dúvida ou sugestão, entre em contato:
+
+- **Autor:** Guilherme Poppi
+- **GitHub:** [Daischi](https://github.com/Daischi)
